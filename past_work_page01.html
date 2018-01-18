@@ -17,6 +17,22 @@
 		color:#424949;
 		height:25%;	
 	}
+	.picture_grid {
+		display:inline-block;
+		width: 1000px;
+		box-sizing:border-box;	
+		float: left;
+	}
+	.row {
+		display: flex;
+		flex-wrap: wrap;
+		padding 0 4px;
+	}
+	.column {
+		flex: 25%;
+		max-width: 25%;
+		padding: 0 4px;
+	}
 </style>
 </head>
 <div id="header" class="header01">
@@ -25,7 +41,7 @@
 		<h2>Past Work</h2>
 		<table style="width:60%">
 		<tr>
-			<th style="text-align:center;"><a href="#contact_bookmark">Contact Me</a></th>
+			<th style="text-align:center;"><a href="#footnote">Contact Me</a></th>
 			<th style="text-align:center;"><a href="Resumes002.html">Main Page</a></th>
 			<th style="text-align:center;">Example</th>
 			<th style="text-align:center;">Example</th>
@@ -33,14 +49,19 @@
 		</table
 	</body>
 </div>
-<div id="main_content" >
-	<body>
-		<p>rando text</p>
-	</body>
+<div id="main_content" class="picture_row" >
+	<div class="picture_column">
+		<img src="Tri.jpg">
+		<img src="Final logo jpg.jpg">
+	</div>
+	<div class="picture_column">
+		<img src="pill.jpg">
+		<img src="scaper.jpg">
+	</div>
 </div>
 
 <div id="footnote" class="footnote01">
-	<body id="contact_bookmark">
+	<body>
 		<p>rando text</p>
 	</body>
 </div>
