@@ -26,12 +26,18 @@
 	.row {
 		display: flex;
 		flex-wrap: wrap;
-		padding 0 4px;
+		padding 0 8px;
 	}
 	.column {
 		flex: 25%;
 		max-width: 25%;
-		padding: 0 4px;
+		padding: 0 8px;
+	}
+	@ media (max-width: 800px) {
+		.column {
+			flex: 50%;
+			max-width: 50%;
+		}
 	}
 </style>
 </head>
@@ -51,7 +57,7 @@
 </div>
 <div id="main_content" class="picture_row" >
 	<div class="picture_column">
-		<img src="Tri.jpg">
+		<img style="width:40%;H=height src="Tri.jpg">
 		<img src="Final logo jpg.jpg">
 	</div>
 	<div class="picture_column">
