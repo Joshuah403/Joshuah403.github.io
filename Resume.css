@@ -1,3 +1,7 @@
+/* fonts */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Raleway|Roboto+Slab');
+
 /* styling and position of header */
 .header {
 	width: 100%;
@@ -6,6 +10,13 @@
 	top: 0;
 	left: 0;
 	background-color: #909497;
+	text-shadow: 4px 4px 4px #aaa;
+	
+}
+.table_links {
+	width:60%;
+	text-align:center; 
+	border: 2px solid #424949; 
 }
 
 /* for the links in the header */
@@ -25,7 +36,7 @@ a:active {
 	border: 4x solid #303030
 }
 /* any main body styling */
-body {
+.body {
 	
 }
 
@@ -37,5 +48,10 @@ body {
 	bottom: 0;
 	left: 0;
 	background-color: #909497;
+}
+.copyright{
+	color:#99A3A4;
+	text-align:center;
+	font-family: 'Montserrat', sans-serif;
 }
 
