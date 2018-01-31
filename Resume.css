@@ -6,32 +6,33 @@
 .header {
 	width: 100%;
 	height: 240px;
-	position: absolute;
+	position: relative;
 	top: 0;
 	left: 0;
 	background-color: #909497;
 	text-shadow: 4px 4px 4px #aaa;
+	font-family: 'Arial',  sans-serif;
 	
 }
-.table_links {
+.header_links {
 	width:60%;
 	text-align:center; 
 	border: 2px solid #424949; 
 }
 
 /* for the links in the header */
-a {
+a.header_links {
 	text-decoration: none;
 	color: #424949;
 	font-family: 'Roboto Slab', serif;
 }
-a:hover {
+a.header_links:hover {
 	border: 4px solid #bcbcbc;
 }
-a:visited {
+a.header_links:visited {
 	color: #424949;
 }
-a:active {
+a.header_links:active {
 	color: #bcbcbc;
 	border: 4x solid #303030
 }
@@ -49,6 +50,13 @@ a:active {
 	left: 0;
 	background-color: #909497;
 }
+
+.footer_table {
+	width:60%;
+	text-align:center; 
+	border: 2px solid #424949; 
+}
+
 .copyright{
 	color:#99A3A4;
 	text-align:center;
