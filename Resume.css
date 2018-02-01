@@ -38,9 +38,7 @@ a.header_links:active {
 /* container */
 .container {
 	min-height:100%;
-	left:0;
-	top:240;
-	position: absolute;
+	position: relative;
 }
 
 /* any main body styling */
