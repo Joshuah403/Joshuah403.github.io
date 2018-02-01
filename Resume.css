@@ -38,7 +38,9 @@ a.header_links:active {
 /* container */
 .container {
 	min-height:100%;
-	position: relative;
+	left:0;
+	top:240;
+	position: absolute;
 }
 
 /* any main body styling */
@@ -51,7 +53,7 @@ a.header_links:active {
 .footer {
 	width: 100%;
 	height: 240px;
-	position: absolute;
+	position: relative;
 	bottom: 0;
 	left: 0;
 	background-color: #909497;
