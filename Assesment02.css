@@ -1,0 +1,27 @@
+a{
+	text-decoration: none;
+	color: #424949;
+	font-family: 'Roboto Slab', serif;
+}
+a:hover{
+	border: 4px solid #bcbcbc;
+	padding-left:-4px;
+}
+a:visited{
+	color: #424949
+}
+.para01 {
+  background-color:#ff0000;
+  text-align: center;
+  border: 4px solid #000cff;
+}
+#para02 {
+  background-color:#000000;
+  color:#ffffff
+  text-align: left;
+  border: 4px solid #000cff;    
+  border-radius:24px;
+}
+.para03 {
+  color: #ffcc00;
+}
