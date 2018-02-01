@@ -12,7 +12,7 @@
 	background-color: #909497;
 	text-shadow: 4px 4px 4px #aaa;
 	font-family: 'Arial',  sans-serif;
-	opacity: .99;
+	z-index: 9;
 }
 .header_links {
 	width:60%;
