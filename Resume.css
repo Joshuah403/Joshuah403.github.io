@@ -33,6 +33,7 @@ a.header_links {
 }
 a.header_links:hover {
 	border: 4px solid #bcbcbc;
+	padding-left:-4px;
 }
 a.header_links:visited {
 	color: #424949;
