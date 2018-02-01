@@ -1,14 +1,13 @@
 a{
 	text-decoration: none;
-	color: #424949;
-	font-family: 'Roboto Slab', serif;
+	color: "blue";
 }
 a:hover{
+	color: "orange";
 	border: 4px solid #bcbcbc;
-	padding-left:-4px;
 }
 a:visited{
-	color: #424949
+	color: "green";
 }
 .para01 {
   background-color:#ff0000;
