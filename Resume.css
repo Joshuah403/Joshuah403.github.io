@@ -2,12 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Raleway|Roboto+Slab');
 
-/* container */
-.container {
-	min-height:100%;
-	position: relative;
-}
-
 /* styling and position of header */
 .header {
 	width: 100%;
@@ -42,6 +36,12 @@ a.header_links:active {
 	color: #bcbcbc;
 	border: 4x solid #303030
 }
+/* container */
+.container {
+	min-height:100%;
+	position: relative;
+}
+
 /* any main body styling */
 .main {
 	padding:240px;
