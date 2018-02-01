@@ -19,6 +19,7 @@ a:visited{
   background-color:#000000;
   color:#ffffff;
   text-align: left;
+  padding: 4px;
   border: 4px solid #000cff;    
   border-radius:24px;
 }
