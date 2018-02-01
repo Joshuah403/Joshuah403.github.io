@@ -45,6 +45,7 @@ a.header_links:active {
 /* any main body styling */
 .main {
 	padding:24px;
+	padding-top: 240px;
 }
 
 /* footer styling and position */
