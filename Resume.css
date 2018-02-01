@@ -1,71 +1,56 @@
-/* fonts */
+<!DOCTYPE html>
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Raleway|Roboto+Slab');
-
-/* container */
-.container {
-	min-height:100%;
-	position: relative;
-}
-
-/* styling and position of header */
-.header {
-	width: 100%;
-	height: 240px;
-	position: absolute;
-	top: 0;
-	left: 0;
-	background-color: #909497;
-	text-shadow: 4px 4px 4px #aaa;
-	font-family: 'Arial',  sans-serif;
+<html>
+<head>
 	
-}
-.header_links {
-	width:60%;
-	text-align:center; 
-}
+	<title>Josh H Resume</title>
+	<link href="Joshuah403.github.io/Resume.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway|Roboto+Slab" rel="stylesheet">
+	
+</head>
 
-/* for the links in the header */
-a.header_links {
-	text-decoration: none;
-	color: #424949;
-	font-family: 'Roboto Slab', serif;
-}
-a.header_links:hover {
-	border: 4px solid #bcbcbc;
-}
-a.header_links:visited {
-	color: #424949;
-}
-a.header_links:active {
-	color: #bcbcbc;
-	border: 4x solid #303030
-}
-/* any main body styling */
-.body {
-	padding:240px;
-	padding-bottom:240px;
-}
 
-/* footer styling and position */
-.footer {
-	width: 100%;
-	height: 240px;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	background-color: #909497;
-}
+<div class="header">
+	<body>
+		<h1>&nbsp Joshua Herbert</h1>
+		<h2>&nbsp Graphic Artist</h2>
+		<table class="header_links">
+		<tr>
+			<th><a class="header_links" href="past_work_page02.html">Past Work</a></th>
+			<th><a class="header_links" href="#contact_bookmark">Contact Me</a></th>
+			<th><a class="header_links" href="JavaScript:void()">Example text</a></th></th>
+			<th><a class="header_links" href="JavaScript:void()">Example text</a></th>
+		</tr>
+		</table>
+	</body>
+</div>
+<div class="container">
+	<div class="main">
+		<body>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquet bibendum enim facilisis gravida neque convallis a cras. Risus feugiat in ante metus dictum at tempor. Ornare aenean euismod elementum nisi quis eleifend quam. Pharetra magna ac placerat vestibulum lectus mauris ultrices eros in. Volutpat commodo sed egestas egestas fringilla phasellus faucibus scelerisque eleifend. Vel fringilla est ullamcorper eget nulla facilisi etiam dignissim. Lacinia quis vel eros donec ac. Morbi non arcu risus quis varius quam quisque. Eget gravida cum sociis natoque penatibus et magnis dis. Magnis dis parturient montes nascetur ridiculus mus mauris vitae. Et tortor at risus viverra adipiscing at in tellus integer. Hac habitasse platea dictumst vestibulum rhoncus est pellentesque. Viverra aliquet eget sit amet tellus cras adipiscing. Massa tincidunt dui ut ornare lectus sit amet est placerat. Faucibus scelerisque eleifend donec pretium. Suspendisse in est ante in nibh mauris.</p>
+			<p>Dignissim cras tincidunt lobortis feugiat vivamus at augue eget. Ultrices eros in cursus turpis massa tincidunt. Eget gravida cum sociis natoque penatibus et magnis dis parturient. Felis eget velit aliquet sagittis id consectetur purus ut. Penatibus et magnis dis parturient montes nascetur ridiculus mus mauris. Diam vulputate ut pharetra sit. Enim ut tellus elementum sagittis vitae et leo duis ut. Nulla malesuada pellentesque elit eget gravida cum. Dui vivamus arcu felis bibendum ut. Eu non diam phasellus vestibulum lorem sed. Viverra tellus in hac habitasse platea dictumst. Eu turpis egestas pretium aenean pharetra. Nisi est sit amet facilisis magna etiam tempor. Risus sed vulputate odio ut enim blandit. Quam adipiscing vitae proin sagittis nisl rhoncus.</p>
+		</body>
+	</div>
+	<div id="footnote" class="footer">
+		<body>
+			<table class="table_links">
+			<tr>
+				<th style="text-align:center; border: 2px solid #424949; ">Contacts</th>
+				<th style="text-align:center; border: 2px solid #424949; ">Social Media</th>
+			</tr>
+			<hr></hr>
+			<tr>
+				<td>&nbsp Email: Email@Email.com</td>
+				<td><a href="https://m.facebook.com" target="blank"><img src="facebook-outline.png" style="width:40px; height: 40px;"></td>
+			</tr>
+			<tr>
+				<td>&nbsp Phone: 123.456.7890</td>
+				<td><a href="https://twitter.com" target="blank"><img src="twitter-clipart.jpg" style="width:40px; height: 40px;"></td>
+			</tr>
+			</table>
+			<p class="copyright"> CopyCat 2018 </p>
+		</body>
+	</div>
+</div>
 
-.footer_table {
-	width:60%;
-	text-align:center; 
-	border: 2px solid #424949; 
-}
-
-.copyright{
-	color:#99A3A4;
-	text-align:center;
-	font-family: 'Montserrat', sans-serif;
-}
-
+</html>
