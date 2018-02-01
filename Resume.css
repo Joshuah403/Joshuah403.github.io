@@ -24,6 +24,7 @@ a.header_links {
 	text-decoration: none;
 	color: #424949;
 	font-family: 'Roboto Slab', serif;
+	transition-duration: 0.4s;
 }
 a.header_links:hover {
 	border: 4px solid #bcbcbc;
