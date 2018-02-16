@@ -14,7 +14,7 @@
   </head>
   
 	<body>
-		<h3> Guess a number between 1 and 10 || Josh Herbert</h3>
+		<h3> Guess a number between 1 and 10 </h3>
 		<button onclick="myFunction()" >test your number</button>
 		<input type="number" id="UserIn" value="enter a number here">
 		<p id="demo"></p>   		
@@ -22,11 +22,9 @@
 		<script>
 			var guess = 0;
 			var mynum = Math.floor(Math.random() * (10) + 1);
+			console.log("mynum " + mynum);
 			function reset() {
-				var guess = 0;
-				var mynum = Math.floor(Math.random() * (10) + 1);
-				document.getElementById("demo").innerHTML = "";
-				console.log("mynum " + mynum + ", guess " + guess);
+				location.reload();
 			}
 			function myFunction() {
 				var x = document.getElementById("UserIn").value;
@@ -40,7 +38,7 @@
 				} else {
 					alert("that isn't the number, try again");
 					guess += 1;
-					console.log("mynum " + mynum + ", guess " + guess + " type of mynum " + typeof mynum + ", type of guess " + typeof guess);
+					console.log("mynum " + mynum + ", guess " + guess);
 				}
 			}
 		</script>
