@@ -1,0 +1,34 @@
+<!doctype html>
+
+<!-- Assessment 3 -->
+
+
+
+
+<html>
+    <head>
+      
+	    <title>Assessment 3</title>
+	    
+    </head>
+    
+    <body>
+      <h3> Enter your password || Josh Herbert</h3>
+		<button onclick="myFunction()" >enter password</button>
+		<input type="string" id="UserIn" value="">
+		<p id="demo"></p>   		
+		
+		<script>
+			var password = "ilovekarl";
+			function myFunction() {
+				var x = document.getElementById("UserIn").value;
+				if (password == x) {
+					document.getElementById("demo").innerHTML = "You are now logged in ";
+				} else {
+					alert("try again");
+				}
+			}
+		</script>
+    </body>
+    
+</html>
