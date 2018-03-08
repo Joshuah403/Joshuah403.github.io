@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<title>JS assignment 5</title>
+
+	<style type="text/css"> 
+		
+	</style>
+
+
+	</head>
+
+	<body>
+		
+		
+		<h3 style="text-align:center">Test Your Reaction Time || Josh Herbert</h3>
+		<p id="timing">your time:</p> 
+		<canvas onClick="cursor(event)" id="shape" width="1250" height="500" style="margin-left:-8px ; margin-top:-8px"></canvas>
+		
+		<script>			
+			
+			var region;
+			var coords;
+			var timeStart;
+			var timeElapsed;
+			var type;
+			
+			// function to take three 0-255 numbers and convert to Hex //
+			function RGB2HTML(red, green, blue)
+			{
+				var decColor =0x1000000+ blue + 0x100 * green + 0x10000 *red ;
+				return '#'+decColor.toString(16).substr(1);
+			}
+			
+			// function to draw shape randomly and define its location and type //
+			function drawShape() {
+				
+				// assign random r,g,b //
+				var r = Math.floor(Math.random()*255 + 1);
+				var g = Math.floor(Math.random()*255 + 1);
+				var b = Math.floor(Math.random()*255 + 1);
+				
+				console.log("R G B: " + r + g + b); // to determine if RGB is correct //
+				
+				// convert to Hex //
+				var colour = RGB2HTML(r,g,b);
+				
+				console.log("Hex colour: " + colour); // to determine if hex is correct //
+				
+				// assign three random numbers 0<n<100 to variables //
+				var randnum = Math.floor(Math.random()*100 + 1);
+				var randnum02 = Math.floor(Math.random()*100 + 1);
+				var randnum03 = Math.floor(Math.random()*100 + 1);
+				
+				// prepares canvas for drawing a shape //
+				var shape = document.getElementById("shape");
+				var ctx = shape.getContext("2d");
+					
+				// clear priviously drawn shapes //
+				ctx.clearRect(0, 0, 1250, 500);
+					
+				// draw shape; square or cricle //
+				if (Math.sin(randnum03) > 0) {
+					ctx.beginPath();					
+					ctx.rect( Math.floor(randnum * 12) , Math.floor(randnum02 * 4.5), 50, 50);
+					ctx.closePath();
+					ctx.fillStyle = (colour);
+					ctx.fill();
+					type = 0;
+				} else {
+					ctx.beginPath();
+					ctx.arc( Math.floor(randnum * 12) , Math.floor(randnum02 * 4.5), 25, 0, 2 * Math.PI);
+					ctx.closePath();
+					ctx.fillStyle = (colour);
+					ctx.fill();
+					type = 1;
+				}
+				
+				// create an array to know the shape's type and location //
+				region = [Math.floor(randnum * 12) , Math.floor(randnum02 * 4.5), type];
+				console.log("region: " + region);
+				timeStart = new Date().getTime()
+				}
+			
+			// executes "drawShape" when page is loaded //
+			window.onload = function() {
+				drawShape();
+			}
+			
+			function cursor(event) {
+				
+				// get user mouse coords //
+				var xM = event.clientX - shape.offsetLeft;
+				var yM = event.clientY - shape.offsetTop;
+				coords = [xM,yM];
+				console.log("mouse coords: " + coords);
+				
+				// define variables for mouse x,y diff relative to the shape //
+				var xD = xM - region[0];
+				var	yD = yM - region[1]; 
+				
+				console.log("xD: " + xD + ", yD: " + yD);
+				
+				// determine distance from center of circle or corner of square //
+				if (region[2] === 1) {
+					console.log("circle chosen");	
+					var radius = Math.pow(Math.pow(xD,2) + Math.pow(yD,2), 0.5);
+					console.log("radius: " + radius);
+					
+					// if the user clicks within the shape than it ends the timer and resets //
+					if (radius <= 25) {
+						timeElapsed = (new Date().getTime()) - timeStart;
+						document.getElementById("timing").innerHTML = "your time: " + timeElapsed/1000 + " seconds";
+						
+						// resets everything to go again //
+						drawShape();
+					}	
+				} else if (region[2] === 0) {
+					console.log("square chosen");
+					console.log("xDiff: " + xD + " yDiff: " + yD);
+					
+					// if the user clicks within the shape than it ends the timer and resets //
+					if (xD <= 50 && xD > 0 && yD <= 50 && yD > 0) {
+						timeElapsed = (new Date().getTime()) - timeStart;	
+						document.getElementById("timing").innerHTML = "your time: " + timeElapsed/1000 + " seconds";
+						
+						// resets everything to go again //
+						drawShape();
+					}
+				} else {
+					console.log("ERROR: region: " + region[2] + ", not within parameters");
+				}	
+			}
+			
+		</script>
+
+	</body>
+</html>
