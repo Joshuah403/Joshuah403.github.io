@@ -332,9 +332,13 @@ Cube.prototype.sideChange = function() {
   for(var i = 0; i < this.sides.length; ++i) {
     this.sides[i].getElementsByClassName('cube-image')[0].className = 'cube-image';    
   }
-
-  this.sides[this.viewport.currentSide - 1].getElementsByClassName('cube-image')[0].className = 'cube-image active';
-
+  var CSide = this.viewport.currentSide - 1
+  console.log(CSide + "CSide")
+  this.sides[CSide].getElementsByClassName('cube-image')[0].className = 'cube-image active';
+  
+  if ([this.viewport.currentSide - 1]  == 6) {
+  document.getElementsByClassName("Content").innerHTML = "Lorem ipsum dolor sit amet, usu qualisque intellegebat ex. Impetus tritani concludaturque eu mei, mei partiendo maiestatis no. Ex vel ocurreret assentior. Duo eros dicam commune no, vidit quando ius ea." ;
+  }
 }
 
 new Cube({
