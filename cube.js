@@ -333,7 +333,7 @@ Cube.prototype.sideChange = function() {
     this.sides[i].getElementsByClassName('cube-image')[0].className = 'cube-image';    
   }
   var CSide = this.viewport.currentSide - 1
-  console.log(CSide + "CSide")
+  console.log(CSide + "CSide");
   this.sides[CSide].getElementsByClassName('cube-image')[0].className = 'cube-image active';
   
   if ([this.viewport.currentSide - 1]  == 6) {
