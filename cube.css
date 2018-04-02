@@ -1,4 +1,4 @@
-*, *:before, *:after {
+cu*, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
@@ -72,7 +72,7 @@ body {
   -o-transform: rotate(180deg);
   transform: rotate(180deg);
   line-height: 200px;
-  font-size: 80px;
+  font-size: 40px;
   text-align: center;
   color: #1b9bd8;
   -webkit-transition: color 600ms;
