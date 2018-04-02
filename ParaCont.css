@@ -1,0 +1,38 @@
+#ContWrapper {
+  margin: 0px;
+}
+.left {
+  width: 100px; 
+  /* background-color: lightblue; */
+  float: left; 
+  text-align: left;
+}
+.right {
+  width: 100px; 
+  /* background-color: lightblue; */
+  float: right; 
+  text-align: right;
+}
+.middle {
+  width: 400px; 
+  /* background-color: lightblue; */
+  margin-left: auto; 
+  margin-right: auto; 
+}
+.ContHeader {
+  margin: 50px;
+  color: #5e5e5e;
+  text-align: justify;
+  text-align-last: center;
+}
+.Content {
+  color: #ffffff;
+  text-align: justify;
+  text-align-last: center;
+}
+.ContFooter {
+  margin: 50px;
+  color: #5e5e5e;
+  text-align: justify;
+  text-align-last: center;
+}
