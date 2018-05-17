@@ -338,10 +338,38 @@ Cube.prototype.sideChange = function() {
   var CSide = this.viewport.currentSide - 1;
   console.log(CSide + "CSide");
   this.sides[CSide].getElementsByClassName('cube-image')[0].className = 'cube-image active';
+  
   if (this.sides[CSide].getElementsByClassName('cube-image')[0].innerHTML == 'Main Page') {
-    document.getElementsByClassName('Content').innerHTML = 'This is a test for main page'
+    document.getElementsByClassName('ContHeader').innerHTML = 'This is a test for main page header'
+    document.getElementsByClassName('Content').innerHTML = 'This is a test for main page body'
+    document.getElementsByClassName('ContFooter').innerHTML = 'This is a test for main page footer'
 }
- console.log(document.getElementsByClassName('Content').innerHTML + " Content HTML") 
+  if (this.sides[CSide].getElementsByClassName('cube-image')[0].innerHTML == 'Contacts') {
+    document.getElementsByClassName('ContHeader').innerHTML = 'This is a test for contacts header'
+    document.getElementsByClassName('Content').innerHTML = 'This is a test for contacts body'
+    document.getElementsByClassName('ContFooter').innerHTML = 'This is a test for contacts footer'
+}
+  if (this.sides[CSide].getElementsByClassName('cube-image')[0].innerHTML == 'test2') {
+    document.getElementsByClassName('ContHeader').innerHTML = 'This is a test for test2 header'
+    document.getElementsByClassName('Content').innerHTML = 'This is a test for test2 body'
+    document.getElementsByClassName('ContFooter').innerHTML = 'This is a test for test2 footer'
+}
+  if (this.sides[CSide].getElementsByClassName('cube-image')[0].innerHTML == 'test3') {
+    document.getElementsByClassName('ContHeader').innerHTML = 'This is a test for test3 header'
+    document.getElementsByClassName('Content').innerHTML = 'This is a test for test3 body'
+    document.getElementsByClassName('ContFooter').innerHTML = 'This is a test for test3 footer'
+}
+  if (this.sides[CSide].getElementsByClassName('cube-image')[0].innerHTML == 'test4') {
+    document.getElementsByClassName('ContHeader').innerHTML = 'This is a test for test4 header'
+    document.getElementsByClassName('Content').innerHTML = 'This is a test for test4 body'
+    document.getElementsByClassName('ContFooter').innerHTML = 'This is a test for test4 footer'
+}
+  if (this.sides[CSide].getElementsByClassName('cube-image')[0].innerHTML == 'test5') {
+    document.getElementsByClassName('ContHeader').innerHTML = 'This is a test for test5 header'
+    document.getElementsByClassName('Content').innerHTML = 'This is a test for test5 body'
+    document.getElementsByClassName('ContFooter').innerHTML = 'This is a test for test5 footer'
+}
+  console.log(document.getElementsByClassName('Content').innerHTML + " Content HTML") 
 }
 
 
