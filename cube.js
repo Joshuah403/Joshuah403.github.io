@@ -11,7 +11,7 @@ function Events() {
 }
 Events.prototype.on = function(name, fn) {
   var events = this.events[name];
-  if (events == undefined) {
+  if (events === undefined) {
     this.events[name] = [ fn ];
     this.emit('event:on', fn);
   } else {
@@ -266,6 +266,7 @@ Viewport.prototype.animate = function() {
     if(this.calculatedSide !== this.currentSide) {
       this.currentSide = this.calculatedSide;
       this.emit('sideChange');
+      this.emit('contentChange', this.currentSide);
     }
 
   }
@@ -292,10 +293,10 @@ var viewport = new Viewport({
 
 function Cube(data) {
   var self = this;
-
+  
   this.element = data.element;
   this.sides = this.element.getElementsByClassName('side');
-
+  console.log(this.sides + 'this.sides  var'); // console log
   this.viewport = data.viewport;
   this.viewport.on('rotate', function() {
     self.rotateSides();
@@ -321,9 +322,11 @@ Cube.prototype.upsideDown = function(obj) {
 
   var deg = (obj.upsideDown == true) ? '180deg' : '0deg';
   var i = 5;
-
+  var textField;  
   while(i > 0 && --i) {
     this.sides[i].getElementsByClassName('cube-image')[0].style[userPrefix.js + 'Transform'] = 'rotate(' + deg + ')';
+    
+    
   }
 
 }
@@ -332,14 +335,16 @@ Cube.prototype.sideChange = function() {
   for(var i = 0; i < this.sides.length; ++i) {
     this.sides[i].getElementsByClassName('cube-image')[0].className = 'cube-image';    
   }
-  var CSide = this.viewport.currentSide - 1
+  var CSide = this.viewport.currentSide - 1;
   console.log(CSide + "CSide");
   this.sides[CSide].getElementsByClassName('cube-image')[0].className = 'cube-image active';
-  
-  if (CSide  == 6) {
-  document.getElementsByClassName("Content").innerHTML = "Lorem ipsum dolor sit amet, usu qualisque intellegebat ex. Impetus tritani concludaturque eu mei, mei partiendo maiestatis no. Ex vel ocurreret assentior. Duo eros dicam commune no, vidit quando ius ea." ;
-  }
+  if (this.sides[CSide].getElementsByClassName('cube-image')[0].innerHTML == 'Main Page') {
+    document.getElementsByClassName('Content').innerHTML = 'This is a test for main page'
 }
+ console.log(document.getElementsByClassName('Content').innerHTML + " Content HTML") 
+}
+
+
 
 new Cube({
   viewport: viewport,
